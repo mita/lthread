@@ -94,7 +94,9 @@ typedef void *(*lthread_func_t) (void *);
  * Then this is the size that will be allocated on lthread creation
  * This is a fixed size and will not grow.
  */
+#ifndef LTHREAD_MAX_STACK_SIZE
 #define LTHREAD_MAX_STACK_SIZE (1024*64)
+#endif
 
 /**
  * Define the maximum number of TLS keys that can be created
